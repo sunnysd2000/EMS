@@ -1,0 +1,44 @@
+<%- include("partials/header") -%>
+<body>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Caseno</th>
+      <th scope="col">Evidno</th>
+      <th scope="col">Data</th>
+      <th scope="col">Owner</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <tr>
+      <th scope="row">1</th>
+      <td>1</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr> -->
+    <% rows.forEach(function(e){ %>
+      <tr>
+        <th scope="row"><%=e.caseno%></th>
+        <td><%=e.id%></td>
+        <td><%=e.data%></td>
+        <td><%=e.ownername%></td>
+      </tr>
+   <% }) %>;
+
+  </tbody>
+</table>
+</body>
+<%- include("partials/footer") -%>
